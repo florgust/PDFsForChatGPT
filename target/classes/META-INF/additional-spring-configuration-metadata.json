@@ -1,0 +1,17 @@
+{"properties": [
+  {
+    "name": "modelo_pdf.simples",
+    "type": "java.lang.String",
+    "description": "A description for 'modelo_pdf.simples'"
+  },
+  {
+    "name": "modelo_pdf.medio",
+    "type": "java.lang.String",
+    "description": "A description for 'modelo_pdf.medio'"
+  },
+  {
+    "name": "modelo_pdf.avancado",
+    "type": "java.lang.String",
+    "description": "A description for 'modelo_pdf.avancado'"
+  }
+]}

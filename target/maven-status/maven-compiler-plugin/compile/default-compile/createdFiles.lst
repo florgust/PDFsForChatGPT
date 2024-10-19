@@ -1,4 +1,5 @@
 com/example/demo/Application.class
+com/example/demo/infrastructure/request/QuestionRequest.class
 com/example/demo/domain/model/responses/GenericResponseForChatGPT$GenericResponseForChatGPTBuilder.class
 com/example/demo/domain/port/SearchAnswerAPIChatGPT.class
 com/example/demo/domain/model/responses/GenericResponseForChatGPT.class
@@ -10,3 +11,4 @@ com/example/demo/infrastructure/controller/PdfForChatGPTController.class
 com/example/demo/infrastructure/adapter/SearchAnswerAPIChatGPTImpl.class
 com/example/demo/domain/resource/CreatePDFForQuestion.class
 com/example/demo/infrastructure/response/AnswerResponse$AnswerResponseBuilder.class
+com/example/demo/infrastructure/request/QuestionRequest$QuestionRequestBuilder.class

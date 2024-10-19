@@ -7,4 +7,5 @@
 /home/luanflor/ws-java/ws-spring/PDFsForChatGPT/src/main/java/com/example/demo/domain/usecase/CreatePDFForQuestionImpl.java
 /home/luanflor/ws-java/ws-spring/PDFsForChatGPT/src/main/java/com/example/demo/infrastructure/adapter/SearchAnswerAPIChatGPTImpl.java
 /home/luanflor/ws-java/ws-spring/PDFsForChatGPT/src/main/java/com/example/demo/infrastructure/controller/PdfForChatGPTController.java
+/home/luanflor/ws-java/ws-spring/PDFsForChatGPT/src/main/java/com/example/demo/infrastructure/request/QuestionRequest.java
 /home/luanflor/ws-java/ws-spring/PDFsForChatGPT/src/main/java/com/example/demo/infrastructure/response/AnswerResponse.java
