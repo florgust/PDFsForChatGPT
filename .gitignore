@@ -25,3 +25,6 @@ replay_pid*
 
 # environment var
 .vscode/*
+
+# target
+target/*
