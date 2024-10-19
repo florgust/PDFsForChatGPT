@@ -1,1 +1,10 @@
-/home/flor-gust/ws-java/PDFsForChatGPT/src/main/java/com/example/demo/Application.java
+/home/luanflor/ws-java/ws-spring/PDFsForChatGPT/src/main/java/com/example/demo/Application.java
+/home/luanflor/ws-java/ws-spring/PDFsForChatGPT/src/main/java/com/example/demo/domain/model/QuestionModel.java
+/home/luanflor/ws-java/ws-spring/PDFsForChatGPT/src/main/java/com/example/demo/domain/model/responses/GenericResponseForChatGPT.java
+/home/luanflor/ws-java/ws-spring/PDFsForChatGPT/src/main/java/com/example/demo/domain/model/responses/ResponseSimpleForChatGPT.java
+/home/luanflor/ws-java/ws-spring/PDFsForChatGPT/src/main/java/com/example/demo/domain/port/SearchAnswerAPIChatGPT.java
+/home/luanflor/ws-java/ws-spring/PDFsForChatGPT/src/main/java/com/example/demo/domain/resource/CreatePDFForQuestion.java
+/home/luanflor/ws-java/ws-spring/PDFsForChatGPT/src/main/java/com/example/demo/domain/usecase/CreatePDFForQuestionImpl.java
+/home/luanflor/ws-java/ws-spring/PDFsForChatGPT/src/main/java/com/example/demo/infrastructure/adapter/SearchAnswerAPIChatGPTImpl.java
+/home/luanflor/ws-java/ws-spring/PDFsForChatGPT/src/main/java/com/example/demo/infrastructure/controller/PdfForChatGPTController.java
+/home/luanflor/ws-java/ws-spring/PDFsForChatGPT/src/main/java/com/example/demo/infrastructure/response/AnswerResponse.java
