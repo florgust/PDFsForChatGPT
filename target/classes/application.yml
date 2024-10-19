@@ -1,8 +1,0 @@
-spring:
-    application:
-        name: pdf.for.chatgpt
-
-modelo_pdf:
-    simples: ${MODELO_PDF_SIMPLES}
-    medio: ${MODELO_PDF_MEDIO}
-    avancado: ${MODELO_PDF_AVANCADO}
