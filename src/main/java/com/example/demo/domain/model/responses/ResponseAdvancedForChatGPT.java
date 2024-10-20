@@ -1,18 +1,18 @@
 package com.example.demo.domain.model.responses;
 
 import lombok.Builder;
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Builder
-@EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor(staticName = "of")
 @Getter
-public class ResponseSimpleForChatGPT extends GenericResponseForChatGPT {
-    
+public class ResponseAdvancedForChatGPT extends GenericResponseForChatGPT{
+
     @Override
     String testes() {
-        return null;
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'testes'");
     }
+    
 }

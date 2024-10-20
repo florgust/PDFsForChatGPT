@@ -11,5 +11,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class QuestionModel {
     private String question;
+    private String name;
+    private String course;
+    private String date;
     private TypeOfPDFs typeOfPDFs;
 }
