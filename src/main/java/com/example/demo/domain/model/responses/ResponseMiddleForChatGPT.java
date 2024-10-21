@@ -9,10 +9,4 @@ import lombok.NoArgsConstructor;
 @Getter
 public class ResponseMiddleForChatGPT extends GenericResponseForChatGPT{
 
-    @Override
-    String testes() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'testes'");
-    }
-    
 }

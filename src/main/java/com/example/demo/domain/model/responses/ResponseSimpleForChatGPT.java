@@ -11,8 +11,4 @@ import lombok.NoArgsConstructor;
 @Getter
 public class ResponseSimpleForChatGPT extends GenericResponseForChatGPT {
     
-    @Override
-    String testes() {
-        return null;
-    }
 }
