@@ -13,10 +13,12 @@ import com.example.demo.domain.port.CreatePDF;
 import com.itextpdf.kernel.pdf.PdfDocument;
 import com.itextpdf.kernel.pdf.PdfWriter;
 import com.itextpdf.layout.Document;
+import com.itextpdf.layout.element.Cell;
 import com.itextpdf.layout.element.Paragraph;
+import com.itextpdf.layout.element.Table;
 import com.itextpdf.layout.element.Text;
 import com.itextpdf.layout.properties.TextAlignment;
-
+import com.itextpdf.layout.properties.UnitValue;
 
 @Service
 public class CreatePDFImpl implements CreatePDF {
@@ -30,25 +32,35 @@ public class CreatePDFImpl implements CreatePDF {
             PdfDocument pdf = new PdfDocument(writer);
             Document document = new Document(pdf);
 
-            // Adicionando o Título em negrito
+            // Criar uma tabela com duas colunas
+            Table table = new Table(2);
+            table.setWidth(UnitValue.createPercentValue(100)); // Definindo a largura da tabela para 100%
+
+            // Adicionando o Título em negrito à primeira coluna
             Text titulo = new Text(questionModel.getQuestion()).setBold().setFontSize(16);
             Paragraph paragraphTitulo = new Paragraph().add(titulo)
-                .setTextAlignment(TextAlignment.LEFT);
-            document.add(paragraphTitulo);
+                    .setTextAlignment(TextAlignment.LEFT);
+            Cell cellTitulo = new Cell().add(paragraphTitulo).setBorder(null);
+            table.addCell(cellTitulo);
+
+            // Adicionando a data à segunda coluna, alinhada à direita
+            Paragraph paragraphData = new Paragraph(questionModel.getDate())
+                    .setTextAlignment(TextAlignment.RIGHT);
+            Cell cellData = new Cell().add(paragraphData).setBorder(null);
+            table.addCell(cellData);
+
+            // Adicionando a tabela ao documento
+            document.add(table);
 
             // Nome e Curso
-            Paragraph nomeCurso = new Paragraph(String.format("%s\n%s", questionModel.getName(), questionModel.getCourse()))
-                .setTextAlignment(TextAlignment.LEFT);
+            Paragraph nomeCurso = new Paragraph(
+                    String.format("%s\n%s\n\n", questionModel.getName(), questionModel.getCourse()))
+                    .setTextAlignment(TextAlignment.LEFT);
             document.add(nomeCurso);
 
-            // Data (à direita)
-            Paragraph data = new Paragraph(questionModel.getDate())
-                .setTextAlignment(TextAlignment.RIGHT);
-            document.add(data);
-
             // Texto formatado e justificado
-            Paragraph response = new Paragraph("Response: formatado e justificado\n- \n- \n- \n- \n- \n- \n- \n-")
-                .setTextAlignment(TextAlignment.JUSTIFIED);
+            Paragraph response = new Paragraph(answerResponseModel.getAnswer())
+                    .setTextAlignment(TextAlignment.JUSTIFIED);
             document.add(response);
 
             // Fechar o documento

@@ -13,5 +13,10 @@
     "name": "modelo_pdf.avancado",
     "type": "java.lang.String",
     "description": "A description for 'modelo_pdf.avancado'"
+  },
+  {
+    "name": "api_key",
+    "type": "java.lang.String",
+    "description": "A description for 'api_key'"
   }
 ]}
