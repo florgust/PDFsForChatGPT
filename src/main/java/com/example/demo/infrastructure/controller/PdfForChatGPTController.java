@@ -4,7 +4,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
@@ -26,18 +26,18 @@ public class PdfForChatGPTController {
 
     private final CreatePDFForQuestion createPDFForQuestion;
 
-    @GetMapping("/pdf-for-chat-gpt")
+    @PostMapping("/pdf-for-chat-gpt")
     public ResponseEntity<byte[]> postPdfForChatGPT(@Valid @RequestBody QuestionRequest questionRequest,
             @RequestHeader @Min(1) @Max(3) int valueModelPdf) {
         MultipartFile genericResponseForChatGPT = createPDFForQuestion
                 .createPDFForQuestion(questionRequest.toModel(valueModelPdf));
+        log.info("Informações recebidas: {}", questionRequest);
         try {
-            // Headers para indicar que estamos retornando um arquivo
             HttpHeaders headers = new HttpHeaders();
             headers.setContentType(MediaType.APPLICATION_PDF);
             headers.setContentDispositionFormData("attachment", genericResponseForChatGPT.getOriginalFilename());
 
-            // Retornando o conteúdo do arquivo como um array de bytes
+            log.info("Tamanho do PDF gerado: {}", genericResponseForChatGPT.getSize());
             return new ResponseEntity<>(genericResponseForChatGPT.getBytes(), headers, HttpStatus.OK);
 
         } catch (Exception e) {

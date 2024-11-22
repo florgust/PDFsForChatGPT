@@ -28,8 +28,8 @@ public class QuestionRequest {
     private String date;
     private TypeOfPDFs typeOfPDFs;
 
-    public QuestionModel toModel(int valueModelpdf) {
-        if(valueModelpdf == 1) {
+    public QuestionModel toModel(Integer valueModelpdf) {
+        if(valueModelpdf == 1 || valueModelpdf == null) {
             this.typeOfPDFs = TypeOfPDFs.MODELO_SIMPLES;
         } else if (valueModelpdf == 2){
             this.typeOfPDFs = TypeOfPDFs.MODELO_MEDIO;
